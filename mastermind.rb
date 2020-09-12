@@ -6,7 +6,7 @@ class Game
   attr_reader :rounds
   def initialize(type, rounds)
     @colors = %w[red orange yellow green pink blue]
-    @color_code = {1 => 'red', 2 => 'orange', 3 => 'yellow', 4 => 'green', 5 => 'pink', 6 => 'blue'}
+    @color_code = { 1 => 'red', 2 => 'orange', 3 => 'yellow', 4 => 'green', 5 => 'pink', 6 => 'blue' }
     @type = type
     @rounds = rounds
   end
@@ -171,6 +171,7 @@ def obtain_name
   puts 'What is your name?'
   print 'Name: '
   name = gets.chomp
+  name
 end
 
 def initialize_code_breaker(game)
@@ -194,7 +195,6 @@ def initialize_code_maker(game)
 end
 
 def round_1(board, round_counter)
-  puts 'AAAAAAAAAAAAAAAA'
   puts "--- ROUND #{round_counter} ---"
   board.show
   board.add_to_guesses
